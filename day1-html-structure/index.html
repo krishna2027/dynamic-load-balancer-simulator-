@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Load Balancing System</title>
+</head>
+<body>
+
+    <header>
+        <h1>Dynamic Load Balancing System</h1>
+        <p>Real-time Multiprogramming OS Simulator</p>
+    </header>
+
+    <main>
+
+        <!-- Control Panel -->
+        <section id="control-panel">
+            <h2>Control Panel</h2>
+
+            <button id="addTask">Add Task</button>
+            <button id="addMultiple">Add 5 Tasks</button>
+            <button id="startBtn">Start Balancing</button>
+            <button id="stopBtn">Stop</button>
+            <button id="resetBtn">Reset</button>
+
+            <div>
+                <label>Load Balancing Algorithm:</label>
+                <select id="algorithm">
+                    <option value="roundRobin">Round Robin</option>
+                    <option value="leastLoaded">Least Loaded</option>
+                    <option value="fcfs">FCFS</option>
+                    <option value="sjf">SJF</option>
+                    <option value="ljf">LJF</option>
+                    <option value="priority">Priority</option>
+                    <option value="weighted">Weighted Round Robin</option>
+                    <option value="leastConnections">Least Connections</option>
+                    <option value="responseTime">Fastest Response</option>
+                    <option value="threshold">Threshold Based</option>
+                    <option value="random">Random</option>
+                </select>
+            </div>
+
+            <div id="stats">
+                <p>Total Tasks: <span id="totalTasks">0</span></p>
+                <p>Balanced Tasks: <span id="balancedTasks">0</span></p>
+                <p>Average Load: <span id="avgLoad">0%</span></p>
+                <p>Load Variance: <span id="variance">0</span></p>
+            </div>
+        </section>
+
+        <!-- Processor Pool -->
+        <section id="processor-pool">
+            <h2>Processor Pool</h2>
+            <div id="processors"></div>
+        </section>
+
+        <!-- Task Queue -->
+        <section id="task-queue">
+            <h2>Task Queue</h2>
+            <div id="taskQueue">No tasks yet.</div>
+
+            <h2>Activity Log</h2>
+            <div id="logContainer"></div>
+        </section>
+
+        <!-- AI Description -->
+        <section id="ai-description">
+            <h2>AI Analysis & Description</h2>
+            <p>System initializing...</p>
+        </section>
+
+        <!-- Charts -->
+        <section id="charts">
+            <h2>Performance Metrics & Charts</h2>
+
+            <div id="chart-tabs">
+                <button>Turnaround Time</button>
+                <button>Waiting Time</button>
+                <button>Completion Time</button>
+                <button>Algorithm Comparison</button>
+            </div>
+
+            <canvas id="metricsChart"></canvas>
+            <div id="metricsSummary"></div>
+        </section>
+
+    </main>
+
+</body>
+</html>
